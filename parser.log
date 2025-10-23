@@ -1,3 +1,645 @@
 [17:03:49] [INFO] start...
 [17:03:49] [INFO] Тип парсера:	requests
 [17:03:50] [INFO] Доступ к URL: OK
+[18:21:45] [INFO] start...
+[18:21:45] [WARNING] name 'log_time' is not defined
+[18:22:13] [INFO] start...
+[18:22:13] [WARNING] name 'status_type_info' is not defined
+[18:22:28] [INFO] start...
+[18:22:28] [INFO] Тип парсера:	requests
+[18:22:31] [WARNING] name 'GREEN' is not defined
+[18:22:46] [INFO] start...
+[18:22:46] [INFO] Тип парсера:	requests
+[18:22:47] [INFO] Доступ к URL: OK
+[18:27:23] [INFO] start...
+[18:27:23] [ERROR] необходимо передать значение: --countries=<value>
+[18:27:23] [INFO] Тип парсера:	requests
+[18:27:24] [INFO] Доступ к URL: OK
+[18:27:38] [INFO] start...
+[18:27:38] [INFO] Тип парсера:	requests
+[18:27:44] [INFO] Доступ к URL: OK
+[18:29:03] [INFO] start...
+[18:29:03] [INFO] Тип парсера:	requests
+[18:29:04] [INFO] Доступ к URL: OK
+[18:33:07] [INFO] start...
+[18:33:07] [INFO] Тип парсера:	requests
+[18:33:13] [INFO] Доступ к URL: OK
+[18:37:46] [INFO] start...
+[18:37:46] [WARNING] name 'argv' is not defined
+[18:38:07] [INFO] start...
+[18:38:07] [WARNING] name 'get_countries' is not defined
+[18:38:24] [INFO] start...
+[18:38:24] [WARNING] name 'url' is not defined
+[18:38:53] [INFO] start...
+[18:38:53] [INFO] Тип парсера:	requests
+[18:38:55] [INFO] Доступ к URL: OK
+[18:38:55] [WARNING] name 'args' is not defined
+[18:39:17] [INFO] start...
+[18:39:17] [INFO] Тип парсера:	requests
+[18:39:17] [INFO] Доступ к URL: OK
+[18:40:08] [INFO] start...
+[18:40:08] [INFO] Тип парсера:	selenium
+[18:40:17] [INFO] Проверка Cloudflare не обнаружена
+[18:42:19] [INFO] start...
+[18:42:19] [INFO] Тип парсера:	requests
+[18:42:19] [INFO] Доступ к URL: OK
+[18:42:34] [INFO] start...
+[18:42:34] [INFO] Тип парсера:	requests
+[18:42:34] [INFO] Доступ к URL: OK
+[18:44:43] [INFO] start...
+[18:44:43] [INFO] Тип парсера:	requests
+[18:44:44] [INFO] Доступ к URL: OK
+{log_time} {status_type_warning} Список город пуст
+[18:44:58] [INFO] start...
+[18:44:58] [INFO] Тип парсера:	requests
+[18:44:58] [INFO] Доступ к URL: OK
+[18:44:58] [WARNING] name 'log_time' is not defined
+[18:45:16] [INFO] start...
+[18:45:16] [INFO] Тип парсера:	requests
+[18:45:17] [INFO] Доступ к URL: OK
+<function log_time at 0x7f12e3c854e0> [WARNING] Список город пуст
+[18:45:26] [INFO] start...
+[18:45:26] [INFO] Тип парсера:	requests
+[18:45:26] [INFO] Доступ к URL: OK
+[18:45:26] [WARNING] Список город пуст
+[18:45:36] [INFO] start...
+[18:45:36] [INFO] Тип парсера:	requests
+[18:45:37] [INFO] Доступ к URL: OK
+[18:45:37] [WARNING] Список городов пуст
+[18:46:39] [INFO] start...
+[18:46:39] [INFO] Тип парсера:	requests
+[18:46:39] [INFO] Доступ к URL: OK
+[18:46:39] [WARNING] Список городов пуст
+[18:47:01] [INFO] start...
+[18:47:01] [INFO] Тип парсера:	requests
+[18:47:01] [INFO] Доступ к URL: OK
+[18:47:01] [WARNING] Список городов пуст
+[18:47:37] [INFO] start...
+[18:47:37] [INFO] Тип парсера:	requests
+[18:47:38] [INFO] Доступ к URL: OK
+[18:47:38] [WARNING] Список городов пуст
+[18:48:09] [INFO] start...
+[18:48:09] [INFO] Тип парсера:	requests
+[18:48:09] [INFO] Доступ к URL: OK
+[18:48:09] [WARNING] Список городов пуст
+[18:49:00] [INFO] start...
+[18:49:00] [INFO] Тип парсера:	selenium
+[18:49:08] [INFO] Проверка Cloudflare не обнаружена
+[18:49:08] [WARNING] Список городов пуст
+[18:51:50] [INFO] start...
+[18:52:08] [INFO] start...
+[18:52:17] [INFO] start...
+[18:53:18] [INFO] start...
+[18:54:31] [INFO] start...
+[18:54:35] [WARNING] 'bytes' object has no attribute 'json'
+[18:55:50] [INFO] start...
+[18:55:51] [WARNING] expected str, bytes or os.PathLike object, not method
+[18:56:13] [INFO] start...
+[18:56:24] [INFO] start...
+[19:02:23] [INFO] start...
+<function log_time at 0x7fcdefbcd4e0> [INFO] https://api.brownbook.net/app/api/v1/businesses/countries: 200
+[19:02:34] [INFO] start...
+[19:02:35] [INFO] https://api.brownbook.net/app/api/v1/businesses/countries: 200
+[19:05:36] [INFO] start...
+[19:05:46] [WARNING] HTTPSConnectionPool(host='api.brownbook.net', port=443): Max retries exceeded with url: /app/api/v1/businesses/countries (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7f9b98f596a0>: Failed to resolve 'api.brownbook.net' ([Errno -3] Temporary failure in name resolution)"))
+[19:05:51] [INFO] start...
+[19:06:02] [WARNING] HTTPSConnectionPool(host='api.brownbook.net', port=443): Max retries exceeded with url: /app/api/v1/businesses/countries (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7fcd67ef96a0>: Failed to resolve 'api.brownbook.net' ([Errno -3] Temporary failure in name resolution)"))
+[19:07:16] [INFO] start...
+[19:07:16] [INFO] https://api.brownbook.net/app/api/v1/businesses/countries: 200
+[19:07:16] [WARNING] unhashable type: 'list'
+[19:07:45] [INFO] start...
+[19:07:47] [INFO] https://api.brownbook.net/app/api/v1/businesses/countries: 200
+[19:10:07] [INFO] start...
+[19:10:08] [INFO] https://api.brownbook.net/app/api/v1/businesses/countries: 200
+[19:14:57] [INFO] start...
+[19:14:58] [INFO] https://api.brownbook.net/app/api/v1/businesses/countries: 200
+[19:15:31] [INFO] start...
+[19:15:32] [INFO] https://api.brownbook.net/app/api/v1/businesses/countries: 200
+[19:19:22] [INFO] start...
+[19:19:23] [INFO] https://api.brownbook.net/app/api/v1/businesses/countries: 200
+[19:19:36] [INFO] start...
+[19:19:36] [INFO] https://api.brownbook.net/app/api/v1/businesses/countries: 200
+[19:38:05] [INFO] start...
+[19:38:05] [INFO] CREATE dir:	Data
+[19:38:07] [INFO] https://api.brownbook.net/app/api/v1/businesses/countries: 200
+[19:38:37] [INFO] start...
+[19:38:37] [INFO] CREATE file:	Result/manta.csv
+[19:38:37] [INFO] CREATE file:	Data/countries.csv
+[19:38:38] [INFO] https://api.brownbook.net/app/api/v1/businesses/countries: 200
+[19:39:54] [INFO] start...
+[19:39:54] [INFO] CREATE file:	Result/brownbook.csv
+[19:39:54] [INFO] CREATE file:	Data/countries.csv
+[19:39:55] [INFO] https://api.brownbook.net/app/api/v1/businesses/countries: 200
+[19:45:48] [INFO] start...
+[19:45:51] [INFO] https://api.brownbook.net/app/api/v1/businesses/countries: 200
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 27806517, 'country_code': 'us'}	27806517	[19:45:51]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 3127616, 'country_code': 'gb'}	3127616	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 2919533, 'country_code': 'de'}	2919533	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 2429878, 'country_code': 'au'}	2429878	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 1297687, 'country_code': 'ca'}	1297687	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 790209, 'country_code': 'ch'}	790209	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 675104, 'country_code': 'it'}	675104	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 476537, 'country_code': 'mx'}	476537	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 449356, 'country_code': 'fr'}	449356	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 438294, 'country_code': 'at'}	438294	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 394851, 'country_code': 'co'}	394851	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 383489, 'country_code': 'in'}	383489	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 294261, 'country_code': 'es'}	294261	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 250683, 'country_code': 'dk'}	250683	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 232140, 'country_code': 'id'}	232140	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 220174, 'country_code': 'br'}	220174	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 214011, 'country_code': 'jp'}	214011	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 171051, 'country_code': 'hk'}	171051	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 154086, 'country_code': 'cn'}	154086	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 153118, 'country_code': 'no'}	153118	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 118546, 'country_code': 'nl'}	118546	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 80834, 'country_code': 'vn'}	80834	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 66569, 'country_code': 'za'}	66569	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 58630, 'country_code': 'ar'}	58630	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 57724, 'country_code': 'ae'}	57724	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 56350, 'country_code': 'ie'}	56350	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 51915, 'country_code': 'se'}	51915	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 38444, 'country_code': 'fi'}	38444	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 30075, 'country_code': 'nz'}	30075	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 27742, 'country_code': 'be'}	27742	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 26598, 'country_code': 'lu'}	26598	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 26586, 'country_code': 'sg'}	26586	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 24914, 'country_code': 'pk'}	24914	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 21921, 'country_code': 'pl'}	21921	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 20291, 'country_code': 'cz'}	20291	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 17129, 'country_code': 'tr'}	17129	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 14764, 'country_code': 'bd'}	14764	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 13187, 'country_code': 'pe'}	13187	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 12125, 'country_code': 'ph'}	12125	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 11684, 'country_code': 'pt'}	11684	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 11486, 'country_code': 'my'}	11486	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 11421, 'country_code': 'sk'}	11421	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 10757, 'country_code': 'cl'}	10757	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 9460, 'country_code': 'th'}	9460	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 9407, 'country_code': 'hu'}	9407	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 8828, 'country_code': 'ru'}	8828	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 8629, 'country_code': 'sa'}	8629	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 8254, 'country_code': 'eg'}	8254	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 6908, 'country_code': 'il'}	6908	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 5745, 'country_code': 'gr'}	5745	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 5354, 'country_code': 'kr'}	5354	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 5216, 'country_code': 'ro'}	5216	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 4781, 'country_code': 'ee'}	4781	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 4246, 'country_code': 'pa'}	4246	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 4148, 'country_code': 'ua'}	4148	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 4024, 'country_code': 'gt'}	4024	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 3555, 'country_code': 'pr'}	3555	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 3233, 'country_code': 'ec'}	3233	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 3182, 'country_code': 'ke'}	3182	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 3168, 'country_code': 'si'}	3168	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 3139, 'country_code': 'lv'}	3139	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 2978, 'country_code': 'kw'}	2978	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 2965, 'country_code': 'ma'}	2965	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 2718, 'country_code': 'tw'}	2718	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 2704, 'country_code': 'lt'}	2704	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 2566, 'country_code': 'jm'}	2566	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 2342, 'country_code': 'ng'}	2342	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 2265, 'country_code': 'bg'}	2265	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 2196, 'country_code': 'hr'}	2196	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 2185, 'country_code': 'qa'}	2185	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 1817, 'country_code': 'np'}	1817	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 1800, 'country_code': 'cr'}	1800	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 1673, 'country_code': 'sv'}	1673	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 1618, 'country_code': 'cy'}	1618	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 1601, 'country_code': 'ad'}	1601	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 1500, 'country_code': 'om'}	1500	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 1204, 'country_code': 'al'}	1204	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 1192, 'country_code': 'bh'}	1192	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 1183, 'country_code': 'lk'}	1183	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 1172, 'country_code': 'as'}	1172	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 1147, 'country_code': 'do'}	1147	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 1139, 'country_code': 'rs'}	1139	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 1120, 'country_code': 'by'}	1120	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 1084, 'country_code': 'tt'}	1084	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 1019, 'country_code': 'ug'}	1019	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 988, 'country_code': 'ge'}	988	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 979, 'country_code': 'bb'}	979	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 909, 'country_code': 're'}	909	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 900, 'country_code': 'lb'}	900	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 878, 'country_code': 'ni'}	878	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 875, 'country_code': 'mt'}	875	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 820, 'country_code': 'tz'}	820	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 814, 'country_code': 'af'}	814	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 802, 'country_code': 'kz'}	802	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 794, 'country_code': 'jo'}	794	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 787, 'country_code': 'ax'}	787	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 750, 'country_code': 'dz'}	750	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 727, 'country_code': 'ao'}	727	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 639, 'country_code': 'ky'}	639	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 628, 'country_code': 'kh'}	628	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 618, 'country_code': 'gh'}	618	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 592, 'country_code': 'az'}	592	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 583, 'country_code': 'am'}	583	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 544, 'country_code': 'is'}	544	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 540, 'country_code': 'tn'}	540	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 520, 'country_code': 'gp'}	520	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 518, 'country_code': 'ag'}	518	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 487, 'country_code': 'bz'}	487	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 469, 'country_code': 'mq'}	469	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 466, 'country_code': 'mo'}	466	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 462, 'country_code': 'vi'}	462	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 457, 'country_code': 'uy'}	457	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 456, 'country_code': 'ba'}	456	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 447, 'country_code': 'ir'}	447	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 445, 'country_code': 'mu'}	445	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 435, 'country_code': 'lc'}	435	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 417, 'country_code': 'bs'}	417	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 384, 'country_code': 'aw'}	384	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 378, 'country_code': 'na'}	378	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 364, 'country_code': 'sm'}	364	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 358, 'country_code': 'ai'}	358	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 314, 'country_code': 've'}	314	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 293, 'country_code': 'li'}	293	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 280, 'country_code': 'bw'}	280	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 276, 'country_code': 'hn'}	276	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 273, 'country_code': 'um'}	273	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 267, 'country_code': 'ci'}	267	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 264, 'country_code': 'mv'}	264	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 258, 'country_code': 'bo'}	258	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 256, 'country_code': 'mc'}	256	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 248, 'country_code': 'mm'}	248	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 246, 'country_code': 'cv'}	246	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 227, 'country_code': 'zm'}	227	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 226, 'country_code': 'fj'}	226	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 224, 'country_code': 'gu'}	224	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 223, 'country_code': 'me'}	223	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 220, 'country_code': 'gd'}	220	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 203, 'country_code': 'cm'}	203	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 198, 'country_code': 'iq'}	198	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 190, 'country_code': 'vg'}	190	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 183, 'country_code': 'gi'}	183	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 173, 'country_code': 'sc'}	173	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 170, 'country_code': 'py'}	170	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 169, 'country_code': 'uz'}	169	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 167, 'country_code': 'zw'}	167	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 166, 'country_code': 'mk'}	166	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 162, 'country_code': 'kn'}	162	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 159, 'country_code': 'bm'}	159	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 157, 'country_code': 'md'}	157	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 149, 'country_code': 'vc'}	149	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 147, 'country_code': 'et'}	147	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 147, 'country_code': 'gy'}	147	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 145, 'country_code': 'gf'}	145	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 144, 'country_code': 'sn'}	144	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 132, 'country_code': 'sz'}	132	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 128, 'country_code': 'mn'}	128	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 126, 'country_code': 'nc'}	126	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 119, 'country_code': 'mg'}	119	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 116, 'country_code': 'bj'}	116	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 115, 'country_code': 'bt'}	115	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 110, 'country_code': 'vu'}	110	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 109, 'country_code': 'cu'}	109	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 107, 'country_code': 'rw'}	107	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 104, 'country_code': 'tc'}	104	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 103, 'country_code': 'bn'}	103	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 101, 'country_code': 'pf'}	101	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 98, 'country_code': 'dm'}	98	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 90, 'country_code': 'kg'}	90	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 90, 'country_code': 'la'}	90	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 80, 'country_code': 'kp'}	80	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 79, 'country_code': 'io'}	79	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 76, 'country_code': 'yt'}	76	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 74, 'country_code': 'fk'}	74	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 70, 'country_code': 'cg'}	70	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 70, 'country_code': 'mz'}	70	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 66, 'country_code': 'ht'}	66	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 61, 'country_code': 'ye'}	61	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 57, 'country_code': 'gm'}	57	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 53, 'country_code': 'pg'}	53	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 53, 'country_code': 'va'}	53	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 48, 'country_code': 'bf'}	48	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 48, 'country_code': 'cf'}	48	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 47, 'country_code': 'ga'}	47	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 47, 'country_code': 'mp'}	47	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 45, 'country_code': 'ck'}	45	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 44, 'country_code': 'an'}	44	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 42, 'country_code': 'ly'}	42	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 42, 'country_code': 'sd'}	42	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 40, 'country_code': 'ms'}	40	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 38, 'country_code': 'bv'}	38	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 38, 'country_code': 'mw'}	38	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 38, 'country_code': 'sr'}	38	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 36, 'country_code': 'sl'}	36	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 35, 'country_code': 'mh'}	35	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 35, 'country_code': 'so'}	35	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 35, 'country_code': 'ws'}	35	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 32, 'country_code': 'to'}	32	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 31, 'country_code': 'ml'}	31	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 31, 'country_code': 'tj'}	31	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 27, 'country_code': 'fo'}	27	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 27, 'country_code': 'wf'}	27	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 25, 'country_code': 'lr'}	25	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 24, 'country_code': 'dj'}	24	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 22, 'country_code': 'bi'}	22	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 21, 'country_code': 'mr'}	21	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 21, 'country_code': 'tg'}	21	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 20, 'country_code': 'td'}	20	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 19, 'country_code': 'sy'}	19	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 18, 'country_code': 'gn'}	18	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 18, 'country_code': 'gq'}	18	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 18, 'country_code': 'pw'}	18	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 18, 'country_code': 'tm'}	18	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 17, 'country_code': 'km'}	17	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 17, 'country_code': 'mf'}	17	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 17, 'country_code': 'ne'}	17	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 16, 'country_code': 'fm'}	16	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 16, 'country_code': 'nf'}	16	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 16, 'country_code': 'nr'}	16	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 16, 'country_code': 'tv'}	16	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 16, 'country_code': 'worldwide'}	16	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 15, 'country_code': 'gl'}	15	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 14, 'country_code': 'ls'}	14	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 13, 'country_code': 'cx'}	13	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 12, 'country_code': 'aq'}	12	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 12, 'country_code': 'cd'}	12	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 10, 'country_code': 'bq'}	10	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 10, 'country_code': 'gw'}	10	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 8, 'country_code': 'er'}	8	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 8, 'country_code': 'pm'}	8	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 8, 'country_code': 'tl'}	8	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 7, 'country_code': 'cc'}	7	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 7, 'country_code': 'cw'}	7	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 7, 'country_code': 'ki'}	7	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 7, 'country_code': 'sb'}	7	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 7, 'country_code': 'sh'}	7	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 7, 'country_code': 'st'}	7	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 7, 'country_code': 'tk'}	7	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 6, 'country_code': 'bl'}	6	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 6, 'country_code': 'nu'}	6	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 6, 'country_code': 'pn'}	6	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 4, 'country_code': 'eh'}	4	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 3, 'country_code': 'sx'}	3	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 3, 'country_code': 'tf'}	3	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 2, 'country_code': 'gg'}	2	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 2, 'country_code': 'je'}	2	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 1, 'country_code': 'im'}	1	[19:45:52]
+<function log_print at 0x7f5ecc6fd3a0> [INFO] {'count': 1, 'country_code': 'ps'}	1	[19:45:52]
+[19:47:02] [INFO] start...
+[19:47:02] [INFO] CREATE file:	Result/brownbook.csv
+[19:47:02] [INFO] CREATE file:	Data/countries.csv
+[19:47:03] [INFO] https://api.brownbook.net/app/api/v1/businesses/countries: 200
+[19:47:03] [WARNING] log_print() missing 1 required positional argument: 'message'
+[19:47:16] [INFO] start...
+[19:47:17] [INFO] https://api.brownbook.net/app/api/v1/businesses/countries: 200
+[19:47:17] [INFO] us	27806517	[19:47:17]
+[19:47:17] [INFO] gb	3127616	[19:47:17]
+[19:47:17] [INFO] de	2919533	[19:47:17]
+[19:47:17] [INFO] au	2429878	[19:47:17]
+[19:47:17] [INFO] ca	1297687	[19:47:17]
+[19:47:17] [INFO] ch	790209	[19:47:17]
+[19:47:17] [INFO] it	675104	[19:47:17]
+[19:47:17] [INFO] mx	476537	[19:47:17]
+[19:47:17] [INFO] fr	449356	[19:47:17]
+[19:47:17] [INFO] at	438294	[19:47:17]
+[19:47:17] [INFO] co	394851	[19:47:17]
+[19:47:17] [INFO] in	383489	[19:47:17]
+[19:47:17] [INFO] es	294261	[19:47:17]
+[19:47:17] [INFO] dk	250683	[19:47:17]
+[19:47:17] [INFO] id	232140	[19:47:17]
+[19:47:17] [INFO] br	220174	[19:47:17]
+[19:47:17] [INFO] jp	214011	[19:47:17]
+[19:47:17] [INFO] hk	171051	[19:47:17]
+[19:47:17] [INFO] cn	154086	[19:47:17]
+[19:47:17] [INFO] no	153118	[19:47:17]
+[19:47:17] [INFO] nl	118546	[19:47:17]
+[19:47:17] [INFO] vn	80834	[19:47:17]
+[19:47:17] [INFO] za	66569	[19:47:17]
+[19:47:17] [INFO] ar	58630	[19:47:17]
+[19:47:17] [INFO] ae	57724	[19:47:17]
+[19:47:17] [INFO] ie	56350	[19:47:17]
+[19:47:17] [INFO] se	51915	[19:47:17]
+[19:47:17] [INFO] fi	38444	[19:47:17]
+[19:47:17] [INFO] nz	30075	[19:47:17]
+[19:47:17] [INFO] be	27742	[19:47:17]
+[19:47:17] [INFO] lu	26598	[19:47:17]
+[19:47:17] [INFO] sg	26586	[19:47:17]
+[19:47:17] [INFO] pk	24914	[19:47:17]
+[19:47:17] [INFO] pl	21921	[19:47:17]
+[19:47:17] [INFO] cz	20291	[19:47:17]
+[19:47:17] [INFO] tr	17129	[19:47:17]
+[19:47:17] [INFO] bd	14764	[19:47:17]
+[19:47:17] [INFO] pe	13187	[19:47:17]
+[19:47:17] [INFO] ph	12125	[19:47:17]
+[19:47:17] [INFO] pt	11684	[19:47:17]
+[19:47:17] [INFO] my	11486	[19:47:17]
+[19:47:17] [INFO] sk	11421	[19:47:17]
+[19:47:17] [INFO] cl	10757	[19:47:17]
+[19:47:17] [INFO] th	9460	[19:47:17]
+[19:47:17] [INFO] hu	9407	[19:47:17]
+[19:47:17] [INFO] ru	8828	[19:47:17]
+[19:47:17] [INFO] sa	8629	[19:47:17]
+[19:47:17] [INFO] eg	8254	[19:47:17]
+[19:47:17] [INFO] il	6908	[19:47:17]
+[19:47:17] [INFO] gr	5745	[19:47:17]
+[19:47:17] [INFO] kr	5354	[19:47:17]
+[19:47:17] [INFO] ro	5216	[19:47:17]
+[19:47:17] [INFO] ee	4781	[19:47:17]
+[19:47:17] [INFO] pa	4246	[19:47:17]
+[19:47:17] [INFO] ua	4148	[19:47:17]
+[19:47:17] [INFO] gt	4024	[19:47:17]
+[19:47:17] [INFO] pr	3555	[19:47:17]
+[19:47:17] [INFO] ec	3233	[19:47:17]
+[19:47:17] [INFO] ke	3182	[19:47:17]
+[19:47:17] [INFO] si	3168	[19:47:17]
+[19:47:17] [INFO] lv	3139	[19:47:17]
+[19:47:17] [INFO] kw	2978	[19:47:17]
+[19:47:17] [INFO] ma	2965	[19:47:17]
+[19:47:17] [INFO] tw	2718	[19:47:17]
+[19:47:17] [INFO] lt	2704	[19:47:17]
+[19:47:17] [INFO] jm	2566	[19:47:17]
+[19:47:17] [INFO] ng	2342	[19:47:17]
+[19:47:17] [INFO] bg	2265	[19:47:17]
+[19:47:17] [INFO] hr	2196	[19:47:17]
+[19:47:17] [INFO] qa	2185	[19:47:17]
+[19:47:17] [INFO] np	1817	[19:47:17]
+[19:47:17] [INFO] cr	1800	[19:47:17]
+[19:47:17] [INFO] sv	1673	[19:47:17]
+[19:47:17] [INFO] cy	1618	[19:47:17]
+[19:47:17] [INFO] ad	1601	[19:47:17]
+[19:47:17] [INFO] om	1500	[19:47:17]
+[19:47:17] [INFO] al	1204	[19:47:17]
+[19:47:17] [INFO] bh	1192	[19:47:17]
+[19:47:17] [INFO] lk	1183	[19:47:17]
+[19:47:17] [INFO] as	1172	[19:47:17]
+[19:47:17] [INFO] do	1147	[19:47:17]
+[19:47:17] [INFO] rs	1139	[19:47:17]
+[19:47:17] [INFO] by	1120	[19:47:17]
+[19:47:17] [INFO] tt	1084	[19:47:17]
+[19:47:17] [INFO] ug	1019	[19:47:17]
+[19:47:17] [INFO] ge	988	[19:47:17]
+[19:47:17] [INFO] bb	979	[19:47:17]
+[19:47:17] [INFO] re	909	[19:47:17]
+[19:47:17] [INFO] lb	900	[19:47:17]
+[19:47:17] [INFO] ni	878	[19:47:17]
+[19:47:17] [INFO] mt	875	[19:47:17]
+[19:47:17] [INFO] tz	820	[19:47:17]
+[19:47:17] [INFO] af	814	[19:47:17]
+[19:47:17] [INFO] kz	802	[19:47:17]
+[19:47:17] [INFO] jo	794	[19:47:17]
+[19:47:17] [INFO] ax	787	[19:47:17]
+[19:47:17] [INFO] dz	750	[19:47:17]
+[19:47:17] [INFO] ao	727	[19:47:17]
+[19:47:17] [INFO] ky	639	[19:47:17]
+[19:47:17] [INFO] kh	628	[19:47:17]
+[19:47:17] [INFO] gh	618	[19:47:17]
+[19:47:17] [INFO] az	592	[19:47:17]
+[19:47:17] [INFO] am	583	[19:47:17]
+[19:47:17] [INFO] is	544	[19:47:17]
+[19:47:17] [INFO] tn	540	[19:47:17]
+[19:47:17] [INFO] gp	520	[19:47:17]
+[19:47:17] [INFO] ag	518	[19:47:17]
+[19:47:17] [INFO] bz	487	[19:47:17]
+[19:47:17] [INFO] mq	469	[19:47:17]
+[19:47:17] [INFO] mo	466	[19:47:17]
+[19:47:17] [INFO] vi	462	[19:47:17]
+[19:47:17] [INFO] uy	457	[19:47:17]
+[19:47:17] [INFO] ba	456	[19:47:17]
+[19:47:17] [INFO] ir	447	[19:47:17]
+[19:47:17] [INFO] mu	445	[19:47:17]
+[19:47:17] [INFO] lc	435	[19:47:17]
+[19:47:17] [INFO] bs	417	[19:47:17]
+[19:47:17] [INFO] aw	384	[19:47:17]
+[19:47:17] [INFO] na	378	[19:47:17]
+[19:47:17] [INFO] sm	364	[19:47:17]
+[19:47:17] [INFO] ai	358	[19:47:17]
+[19:47:17] [INFO] ve	314	[19:47:17]
+[19:47:17] [INFO] li	293	[19:47:17]
+[19:47:17] [INFO] bw	280	[19:47:17]
+[19:47:17] [INFO] hn	276	[19:47:17]
+[19:47:17] [INFO] um	273	[19:47:17]
+[19:47:17] [INFO] ci	267	[19:47:17]
+[19:47:17] [INFO] mv	264	[19:47:17]
+[19:47:17] [INFO] bo	258	[19:47:17]
+[19:47:17] [INFO] mc	256	[19:47:17]
+[19:47:17] [INFO] mm	248	[19:47:17]
+[19:47:17] [INFO] cv	246	[19:47:17]
+[19:47:17] [INFO] zm	227	[19:47:17]
+[19:47:17] [INFO] fj	226	[19:47:17]
+[19:47:17] [INFO] gu	224	[19:47:17]
+[19:47:17] [INFO] me	223	[19:47:17]
+[19:47:17] [INFO] gd	220	[19:47:17]
+[19:47:17] [INFO] cm	203	[19:47:17]
+[19:47:17] [INFO] iq	198	[19:47:17]
+[19:47:17] [INFO] vg	190	[19:47:17]
+[19:47:17] [INFO] gi	183	[19:47:17]
+[19:47:17] [INFO] sc	173	[19:47:17]
+[19:47:17] [INFO] py	170	[19:47:17]
+[19:47:17] [INFO] uz	169	[19:47:17]
+[19:47:17] [INFO] zw	167	[19:47:17]
+[19:47:17] [INFO] mk	166	[19:47:17]
+[19:47:17] [INFO] kn	162	[19:47:17]
+[19:47:17] [INFO] bm	159	[19:47:17]
+[19:47:17] [INFO] md	157	[19:47:17]
+[19:47:17] [INFO] vc	149	[19:47:17]
+[19:47:17] [INFO] et	147	[19:47:17]
+[19:47:17] [INFO] gy	147	[19:47:17]
+[19:47:17] [INFO] gf	145	[19:47:17]
+[19:47:17] [INFO] sn	144	[19:47:17]
+[19:47:17] [INFO] sz	132	[19:47:17]
+[19:47:17] [INFO] mn	128	[19:47:17]
+[19:47:17] [INFO] nc	126	[19:47:17]
+[19:47:17] [INFO] mg	119	[19:47:17]
+[19:47:17] [INFO] bj	116	[19:47:17]
+[19:47:17] [INFO] bt	115	[19:47:17]
+[19:47:17] [INFO] vu	110	[19:47:17]
+[19:47:17] [INFO] cu	109	[19:47:17]
+[19:47:17] [INFO] rw	107	[19:47:17]
+[19:47:17] [INFO] tc	104	[19:47:17]
+[19:47:17] [INFO] bn	103	[19:47:17]
+[19:47:17] [INFO] pf	101	[19:47:17]
+[19:47:17] [INFO] dm	98	[19:47:17]
+[19:47:17] [INFO] kg	90	[19:47:17]
+[19:47:17] [INFO] la	90	[19:47:17]
+[19:47:17] [INFO] kp	80	[19:47:17]
+[19:47:17] [INFO] io	79	[19:47:17]
+[19:47:17] [INFO] yt	76	[19:47:17]
+[19:47:17] [INFO] fk	74	[19:47:17]
+[19:47:17] [INFO] cg	70	[19:47:17]
+[19:47:17] [INFO] mz	70	[19:47:17]
+[19:47:17] [INFO] ht	66	[19:47:17]
+[19:47:17] [INFO] ye	61	[19:47:17]
+[19:47:17] [INFO] gm	57	[19:47:17]
+[19:47:17] [INFO] pg	53	[19:47:17]
+[19:47:17] [INFO] va	53	[19:47:17]
+[19:47:17] [INFO] bf	48	[19:47:17]
+[19:47:17] [INFO] cf	48	[19:47:17]
+[19:47:17] [INFO] ga	47	[19:47:17]
+[19:47:17] [INFO] mp	47	[19:47:17]
+[19:47:17] [INFO] ck	45	[19:47:17]
+[19:47:17] [INFO] an	44	[19:47:17]
+[19:47:17] [INFO] ly	42	[19:47:17]
+[19:47:17] [INFO] sd	42	[19:47:17]
+[19:47:17] [INFO] ms	40	[19:47:17]
+[19:47:17] [INFO] bv	38	[19:47:17]
+[19:47:17] [INFO] mw	38	[19:47:17]
+[19:47:17] [INFO] sr	38	[19:47:17]
+[19:47:17] [INFO] sl	36	[19:47:17]
+[19:47:17] [INFO] mh	35	[19:47:17]
+[19:47:17] [INFO] so	35	[19:47:17]
+[19:47:17] [INFO] ws	35	[19:47:17]
+[19:47:17] [INFO] to	32	[19:47:17]
+[19:47:17] [INFO] ml	31	[19:47:17]
+[19:47:17] [INFO] tj	31	[19:47:17]
+[19:47:17] [INFO] fo	27	[19:47:17]
+[19:47:17] [INFO] wf	27	[19:47:17]
+[19:47:17] [INFO] lr	25	[19:47:17]
+[19:47:17] [INFO] dj	24	[19:47:17]
+[19:47:17] [INFO] bi	22	[19:47:17]
+[19:47:17] [INFO] mr	21	[19:47:17]
+[19:47:17] [INFO] tg	21	[19:47:17]
+[19:47:17] [INFO] td	20	[19:47:17]
+[19:47:17] [INFO] sy	19	[19:47:17]
+[19:47:17] [INFO] gn	18	[19:47:17]
+[19:47:17] [INFO] gq	18	[19:47:17]
+[19:47:17] [INFO] pw	18	[19:47:17]
+[19:47:17] [INFO] tm	18	[19:47:17]
+[19:47:17] [INFO] km	17	[19:47:17]
+[19:47:17] [INFO] mf	17	[19:47:17]
+[19:47:17] [INFO] ne	17	[19:47:17]
+[19:47:17] [INFO] fm	16	[19:47:17]
+[19:47:17] [INFO] nf	16	[19:47:17]
+[19:47:17] [INFO] nr	16	[19:47:17]
+[19:47:17] [INFO] tv	16	[19:47:17]
+[19:47:17] [INFO] worldwide	16	[19:47:17]
+[19:47:17] [INFO] gl	15	[19:47:17]
+[19:47:17] [INFO] ls	14	[19:47:17]
+[19:47:17] [INFO] cx	13	[19:47:17]
+[19:47:17] [INFO] aq	12	[19:47:17]
+[19:47:17] [INFO] cd	12	[19:47:17]
+[19:47:17] [INFO] bq	10	[19:47:17]
+[19:47:17] [INFO] gw	10	[19:47:17]
+[19:47:17] [INFO] er	8	[19:47:17]
+[19:47:17] [INFO] pm	8	[19:47:17]
+[19:47:17] [INFO] tl	8	[19:47:17]
+[19:47:17] [INFO] cc	7	[19:47:17]
+[19:47:17] [INFO] cw	7	[19:47:17]
+[19:47:17] [INFO] ki	7	[19:47:17]
+[19:47:17] [INFO] sb	7	[19:47:17]
+[19:47:17] [INFO] sh	7	[19:47:17]
+[19:47:17] [INFO] st	7	[19:47:17]
+[19:47:17] [INFO] tk	7	[19:47:17]
+[19:47:17] [INFO] bl	6	[19:47:17]
+[19:47:17] [INFO] nu	6	[19:47:17]
+[19:47:17] [INFO] pn	6	[19:47:17]
+[19:47:17] [INFO] eh	4	[19:47:17]
+[19:47:17] [INFO] sx	3	[19:47:17]
+[19:47:17] [INFO] tf	3	[19:47:17]
+[19:47:17] [INFO] gg	2	[19:47:17]
+[19:47:17] [INFO] je	2	[19:47:17]
+[19:47:17] [INFO] im	1	[19:47:17]
+[19:47:17] [INFO] ps	1	[19:47:17]
+[19:47:43] [INFO] start...
+[19:47:43] [INFO] CREATE file:	Result/brownbook.csv
+[19:47:43] [INFO] CREATE file:	Data/countries.csv
+[19:47:44] [INFO] https://api.brownbook.net/app/api/v1/businesses/countries: 200
+[19:48:56] [INFO] start...
+[19:48:56] [INFO] CREATE dir:	Result
+[19:48:56] [INFO] CREATE file:	Result/brownbook.csv
+[19:48:56] [INFO] CREATE dir:	Data
+[19:48:56] [INFO] CREATE file:	Data/countries.csv
+[19:48:57] [INFO] https://api.brownbook.net/app/api/v1/businesses/countries: 200

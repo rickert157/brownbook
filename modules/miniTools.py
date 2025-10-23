@@ -1,7 +1,9 @@
 from SinCity.colors import RED, RESET, GREEN, BLUE, YELLOW
 from modules.config import (
-        result_dir, 
-        result_file_path, 
+        result_dir,
+        result_file_path,
+        data_dir,
+        countries_file,
         status_type_info,
         status_type_warning,
         status_type_error
@@ -28,13 +30,27 @@ def init_parser():
     if not os.path.exists(result_file_path):
         with open(result_file_path, 'w') as file:
             writer = csv.writer(file)
-            writer.writerow(['Company', 'Domain', 'Phone', 'Location'])
+            writer.writerow(['Company', 'Domain', 'Email', 'Phone', 'Location'])
         log_print(f'{log_time()} {status_type_info} CREATE file:\t{result_file_path}')
 
+    if not os.path.exists(data_dir):
+        os.makedirs(data_dir)
+        log_print(f'{log_time()} {status_type_info} CREATE dir:\t{data_dir}')
+
+    if not os.path.exists(countries_file):
+        with open(countries_file, 'w') as file:
+            writer = csv.writer(file)
+            writer.writerow(['Country', 'Count'])
+        log_print(f'{log_time()} {status_type_info} CREATE file:\t{countries_file}')
+
+def recording_countries(country:str, count:str):
+    with open(countries_file, 'a') as file:
+        writer = csv.writer(file)
+        writer.writerow([country, count]) 
 
 def parse_params(params:list[str]) -> dict[str | None]:
     """Парсер параметров коммандной строки"""
-    commands = ['--test-url', '--parser']
+    commands = ['--test-url', '--parser', '--countries']
     parsed_argv = {}
     
     for command in commands:
