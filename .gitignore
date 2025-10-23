@@ -1,0 +1,5 @@
+venv/
+tests/
+Result/
+**/*.py[oc]
+**/__pycache__/*
