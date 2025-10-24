@@ -13,6 +13,7 @@ from modules.config import (
         )
 from modules.parser import get_source_page 
 from modules.get_countries import get_all_countries
+from modules.sitemaps import get_urls
 import requests
 import sys
 import time
@@ -32,6 +33,7 @@ if __name__ == '__main__':
             test_url = argv['--test-url'] if argv.get('--test-url') else None 
             parser = argv['--parser'] if argv.get('--parser') else None 
             countries = argv['--countries'] if argv.get('--countries') else None
+            sitemap = argv['--sitemap'] if argv.get('--sitemap') else None
 
             parser_mode_list = ['requests', 'selenium', None]
 
@@ -42,6 +44,8 @@ if __name__ == '__main__':
             
             if countries:
                 get_all_countries()
+            elif sitemap:
+                get_urls(mode=sitemap)
             elif test_url:
                 get_source_page(url=test_url, parser=parser)
             

@@ -50,7 +50,7 @@ def recording_countries(country:str, count:str):
 
 def parse_params(params:list[str]) -> dict[str | None]:
     """Парсер параметров коммандной строки"""
-    commands = ['--test-url', '--parser', '--countries']
+    commands = ['--test-url', '--parser', '--countries', '--sitemap']
     parsed_argv = {}
     
     for command in commands:
