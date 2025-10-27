@@ -1,0 +1,8 @@
+venv/
+tests/
+trash/
+Data/
+Result/
+**/*.py[oc]
+**/__pycache__/*
+*.log
