@@ -8,9 +8,11 @@ from modules.config import (
         status_type_info,
         data_dir,
         sitemap_second_level,
-        sitemap_first_step_file
+        sitemap_first_step_file,
+        sitemap_complite,
+        sitemap_db
         )
-from modules.sql.recording_url import recording_urls_to_db
+from modules.sql.recording_url import recording_urls_to_db, get_url_from_db
 from SinCity.Agent.header import header
 from SinCity.colors import GREEN, BLUE, RESET
 import requests
@@ -51,8 +53,26 @@ def recording_second_level_map(list_url) -> None:
         for url in list_url:
             file.write(f'{url}\n')
 
+
+def recording_company(list_url:str, list_complite:set) -> None:
+    pattern_url = 'https://www.brownbook.net/business/'
+    for url in list_url:
+        if pattern_url in url and url not in list_complite:
+            pass
+
+def complite_urls():
+    list_complite = set()
+    if os.path.exists(sitemap_complite):
+        with open(sitemap_last_step_txt, 'r') as file:
+            for line in file.readlines():
+                list_complite.add(line.strip())
+
+    return list_complite
+
+
+
 def get_urls(mode:str):
-    modes = ['sitemap-level-1', 'sitemap-level-2', 'company']
+    modes = ['sitemap-level-1', 'sitemap-level-2', 'get-company']
     
     if mode not in modes:
         log_print(
@@ -106,4 +126,25 @@ def get_urls(mode:str):
             log_print(
                     f'{log_time()} {status_type_error} '
                     f'файл {sitemap_first_step_file} не обнаружен')
+    elif mode == 'get-company':
+        
+        txt_status = os.path.exists(sitemap_second_level)
+        db_status = os.path.exists(sitemap_db)
+        
+        if db_status or txt_status:
+            if db_status:
+                """ тут что-то уже сам не понял, что написал
+                list_urls = get_url_from_db()
+
+                list_complite = complite_urls()
+                
+                for url in list_urls:
+                    list_company = parser_xml(url=url)
+                    recording_company(list_url=list_company, list_complite=list_complite)
+                """
+        else:
+            log_print(
+                    f'{log_time()} {status_type_error} '
+                    f'Не найдены {sitemap_second_level} и {sitemap_db}'
+                    )
         

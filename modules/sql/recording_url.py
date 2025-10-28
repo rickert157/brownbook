@@ -35,6 +35,17 @@ def recording_urls_to_db():
         conn.executemany(recording_command, list_urls)
         conn.commit()
 
+def get_url_from_db():
+    set_urls = set()
+    conn = sqlite3.connect(sitemap_db)
+    cursor = conn.cursor()
+    get_urls_command = "SELECT url FROM urls;"
+    cursor.execute(get_urls_command)
+    urls = cursor.fetchall()
+    for url in urls:
+        set_urls.add(url[0])
+    return set_urls
+
 
 if __name__ == '__main__':
     recording_urls_to_db()

@@ -10,6 +10,7 @@ countries_file = f'{data_dir}/countries.csv'
 sitemap_first_step_file = f'{data_dir}/sitemap_start.txt'
 sitemap_second_level = f'{data_dir}/sitemap_second.txt'
 sitemap_last_level = f'{data_dir}/all_business.txt'
+sitemap_complite = f'{data_dir}/sitemap_complite.txt'
 
 sitemap_db = f'{data_dir}/sitemap.db'
 
