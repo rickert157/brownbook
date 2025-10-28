@@ -87,7 +87,6 @@ def parser_script(script:str):
         print(f'не наш клиент')
 
 
-
 def get_info(response:str):
     bs = BeautifulSoup(response, 'lxml')
     scripts = bs.find_all('script')
