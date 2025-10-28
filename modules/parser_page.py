@@ -19,24 +19,41 @@ def get_info(response:str):
                 print(f'{a}: {b}')
 
             company_name = data.get('name')
-            image_url = data.get('image')
-            logo = data.get('logo')
             email = data.get('email')
+            phone = data.get('telephone')
+            description = data.get('description')
+            image_url = data.get('image')
+            url = data.get('url')
+            logo = data.get('logo')
             founder_name = data.get('founder').get('name')
+            address_street = data.get('address').get('streetAddress')
+            post_code = data.get('address').get('postalCode')
+            country = data.get('address').get('addressCountry')
+            company_name = company_name.title() if company_name else company_name
             print(
-                    f'company name:\t{company_name}\n'
-                    f'email:\t\t{email}\n'
-                    f'founder:\t{founder_name}'
+                    f'Company:\t{company_name}\n'
+                    f'Founder:\t{founder_name}\n'
+                    f'Country:\t{country}\n'
+                    f'Post Code:\t{post_code}\n'
+                    f'Street:\t\t{address_street}\n'
+                    f'Email:\t\t{email}\n'
+                    f'Phone:\t\t{phone}\n'
+                    f'URL:\t\t{url}\n'
+                    f'Description:\t{description}'
                     )
 
 
 def get_page_info(url:str):
-    head = header()
-    response = requests.get(url, headers=head)
-    status = response.status_code
+    try:
+        head = header()
+        response = requests.get(url, headers=head)
+        status = response.status_code
 
-    if status == 200:
-        get_info(response=response.text)
+        if status == 200:
+            get_info(response=response.text)
+    
+    except requests.exceptions.ConnectionError:
+        print('ConnectionError')
 
 if __name__ == '__main__':
     params = sys.argv
