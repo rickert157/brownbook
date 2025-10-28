@@ -37,9 +37,15 @@ def parser_xml(url:str) -> Optional[list[str] | None]:
     return list_url
 
 sitemap_first_step_file = f'{data_dir}/sitemap_start.txt'
+sitemap_second_level = f'{data_dir}/sitemap_second.txt'
 
 def recording_first_list_sitemap(list_url:list[str]) -> None:
     with open(sitemap_first_step_file, 'w') as file:
+        for url in list_url:
+            file.write(f'{url}\n')
+
+def recording_second_level_map(list_url) -> None:
+    with open(sitemap_second_level, 'a') as file:
         for url in list_url:
             file.write(f'{url}\n')
 
@@ -72,6 +78,13 @@ def get_urls(mode:str):
                     count_url+=1
                     url = line.strip()
                     print(f'{log_time()} {status_type_info} [{count_url}] {url} ')
+                    list_xml = parser_xml(url=url)
+                    if len(list_xml) != 0:
+                        recording_second_level_map(list_url=list_xml)
+                        log_print(
+                                f'{log_time()} {status_type_info} '
+                                f'получен список первых {len(list_xml)} ссылок'
+                        )
         else:
             log_print(
                     f'{log_time()} {status_type_error} '
