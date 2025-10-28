@@ -6,9 +6,13 @@ from modules.config import (
         status_type_error, 
         status_type_warning,
         status_type_info,
-        data_dir
+        data_dir,
+        sitemap_second_level,
+        sitemap_first_step_file
         )
+from modules.sql.recording_url import recording_urls_to_db
 from SinCity.Agent.header import header
+from SinCity.colors import GREEN, BLUE, RESET
 import requests
 import time
 import os
@@ -36,8 +40,6 @@ def parser_xml(url:str) -> Optional[list[str] | None]:
 
     return list_url
 
-sitemap_first_step_file = f'{data_dir}/sitemap_start.txt'
-sitemap_second_level = f'{data_dir}/sitemap_second.txt'
 
 def recording_first_list_sitemap(list_url:list[str]) -> None:
     with open(sitemap_first_step_file, 'w') as file:
@@ -72,6 +74,7 @@ def get_urls(mode:str):
                     )
     elif mode == 'sitemap-level-2':
         if os.path.exists(sitemap_first_step_file):
+            if os.path.exists(sitemap_second_level):os.remove(sitemap_second_level)
             with open(sitemap_first_step_file, 'r') as file:
                 count_url = 0
                 for line in file.readlines():
@@ -85,12 +88,22 @@ def get_urls(mode:str):
                                 f'{log_time()} {status_type_info} '
                                 f'получен список первых {len(list_xml)} ссылок'
                         )
+            query_recording_url_to_db = input(
+                    f'{BLUE}Записать ссылки в базу данных?{RESET}[y/n] '
+                    )
+            if 'y' in query_recording_url_to_db:
+                log_print(
+                        f'{log_time()} {status_type_info} '
+                        f'{GREEN}Записываем данные в базу данных...'
+                        )
+                recording_urls_to_db()
+                log_print(f'{log_time()} {status_type_info} Ссылки записаны')
+            else:
+                log_print(
+                        f'{log_time()} {status_type_warning} '
+                        f'Запись ссылок в базу данных отклонена')
         else:
             log_print(
                     f'{log_time()} {status_type_error} '
                     f'файл {sitemap_first_step_file} не обнаружен')
         
-
-    
-    
-
