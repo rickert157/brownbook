@@ -11,8 +11,14 @@ from modules.config import (
 from modules.logger import log_print
 import csv
 import os
+import shutil
 import sys
 import time
+
+def termninal_line():
+    len_line = shutil.get_terminal_size().columns
+    line = '|'+'-'*(int(len_line)-2)+'|'
+    return line
 
 
 def log_time():

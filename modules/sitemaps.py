@@ -14,14 +14,11 @@ import os
 import sys
 
 count_page = 0
-url_xml = 'url_xml.txt'
-url_business = 'business.txt'
 
 def recording_xml(url:str, step:Optional[str]=None):
     file_name = url_business if step else url_xml
     with open(file_name, 'a') as file:
         file.write(f'{url}\n')
-
 
 def parser_xml(url:str, step:Optional[str]=None) -> Optional[list[str] | None]:
     global count_page
@@ -43,29 +40,16 @@ def parser_xml(url:str, step:Optional[str]=None) -> Optional[list[str] | None]:
     return list_url
 
 def get_urls(mode:str):
-    modes = ['sitemap', 'company']
+    modes = ['sitemap-level-1', 'sitemap-level-2', 'company']
     
     if mode not in modes:
-        log_print(f'{log_time()} {status_type_error} необходимо выбрать мод: {modes}')
+        log_print(f'{log_time()} {status_type_error} необходимо выбрать мод:\n{modes}')
         return 
     
-    elif mode == 'sitemap':
+    elif mode == 'sitemap-level-1':
         api_url = 'https://api.brownbook.net/sitemap_indexes.xml'
         #собираем первые сайтмапы
-        pages = parser_xml(url=api_url)
-        if len(pages) != 0:
-            for page in pages:
-                #собираем все сайтмапы
-                parser_xml(url=page)
-                time.sleep(1)
-        with open(url_xml, 'r') as file:
-            for line in file.readlines():
-                url = line.strip()
-                if '/sitemap/index_' not in url:
-                    parser_xml(url, step='end')
 
-    elif mode == 'company':
-        log_print(f'{log_time()} {status_type_info} Модуль в стадии планирования')
     
     
 

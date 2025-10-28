@@ -1,17 +1,20 @@
 from bs4 import BeautifulSoup
 from modules.parser import get_source_page
+from modules.miniTools import termninal_line
 from SinCity.Agent.header import header
+from SinCity.colors import RED, RESET, GREEN, BLUE, YELLOW
 import json
 import requests
 import sys
 import time
+
 
 def parser_description(key:str, script:str) -> str:
     try:
         value = script.split(f'"{key}":')[1].split('"')[1]
         return value
     except IndexError:
-        print('IndexError')
+        pass
 
 def parser_text(key:str, script:str) -> str:
     try:
@@ -20,7 +23,7 @@ def parser_text(key:str, script:str) -> str:
         if value == "null":value = None
         return value
     except IndexError:
-        print('IndexError')
+        pass
 
 def parser_category(key:str, script:str) -> str:
     try:
@@ -29,7 +32,7 @@ def parser_category(key:str, script:str) -> str:
         if '"' in category:category = category.replace('"', '')
         return category
     except IndexError:
-        print('IndexError')
+        pass
 
 def parser_script(script:str):
     try:
@@ -40,12 +43,15 @@ def parser_script(script:str):
                 script = script.lstrip("self.__next_f.push(")
                 script = script.rstrip(")")
             if '\\' in script:script = script.replace('\\', '')
-            print(script)
+            #print(script)
             company_name = parser_text(key='name', script=script).title()
             email = parser_text(key="email", script=script)
             phone = parser_text(key="telephone", script=script)
             if phone == None:
                 phone = parser_text(key="phone", script=script)
+            if phone != None:
+                if ']' in phone:phone = phone.replace(']', '')
+                if '}' in phone:phone = phone.replace('}', '')
             site = parser_text(key="website", script=script)
             if site != None and '?' in site:site = site.split('?')[0]
             city = parser_text(key="city", script=script)
@@ -61,20 +67,21 @@ def parser_script(script:str):
             linkedin = parser_text(key="linkedin", script=script)
             description = parser_description(key="description", script=script)
             print(
-                    f"Company:\t{company_name}\n"
-                    f"Email:\t\t{email}\n"
-                    f"Phone:\t\t{phone}\n"
-                    f"Site:\t\t{site}\n"
-                    f"Category:\t{category}\n"
-                    f"Country:\t{country}\n"
-                    f"City:\t\t{city}\n"
-                    f"Street:\t\t{street}\n"
-                    f"Zip Code:\t{zip_code}\n"
-                    f"Twitter:\t{twitter}\n"
-                    f"Facebook:\t{facebook}\n"
-                    f"Instagram:\t{insta}\n"
-                    f"Linkedin:\t{linkedin}\n"
-                    f"Description:\t{description}"
+                    f"{GREEN}{termninal_line()}{RESET}\n"
+                    f"{GREEN}|{RESET} Company:\t{company_name}\n"
+                    f"{GREEN}|{RESET} Email:\t{email}\n"
+                    f"{GREEN}|{RESET} Phone:\t{phone}\n"
+                    f"{GREEN}|{RESET} Site:\t\t{site}\n"
+                    f"{GREEN}|{RESET} Category:\t{category}\n"
+                    f"{GREEN}|{RESET} Country:\t{country}\n"
+                    f"{GREEN}|{RESET} City:\t\t{city}\n"
+                    f"{GREEN}|{RESET} Street:\t{street}\n"
+                    f"{GREEN}|{RESET} Zip Code:\t{zip_code}\n"
+                    f"{GREEN}|{RESET} Twitter:\t{twitter}\n"
+                    f"{GREEN}|{RESET} Facebook:\t{facebook}\n"
+                    f"{GREEN}|{RESET} Instagram:\t{insta}\n"
+                    f"{GREEN}|{RESET} Linkedin:\t{linkedin}\n"
+                    f"{GREEN}|{RESET} Description:\t{description}"
                     )
     except IndexError:
         print(f'не наш клиент')
@@ -92,7 +99,7 @@ def get_info(response:str):
             redirect_url = script.split(";replace;")[1]
             if ';' in redirect_url:redirect_url = redirect_url.split(';')[0]
             redirect_url = f'https://www.brownbook.net{redirect_url}'
-            print(f'REDIRECT TO: {redirect_url}')
+            print(f'{RED}REDIRECT TO: {redirect_url}{RESET}')
             get_page_info(url=redirect_url)
             return
 
