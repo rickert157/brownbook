@@ -6,42 +6,98 @@ import requests
 import sys
 import time
 
+def parser_description(key:str, script:str) -> str:
+    try:
+        value = script.split(f'"{key}":')[1].split('"')[1]
+        return value
+    except IndexError:
+        print('IndexError')
+
+def parser_text(key:str, script:str) -> str:
+    try:
+        value = script.split(f'"{key}":')[1].split(',')[0]
+        if '"' in value:value = value.replace('"', '')
+        if value == "null":value = None
+        return value
+    except IndexError:
+        print('IndexError')
+
+def parser_category(key:str, script:str) -> str:
+    try:
+        tag_block = script.split('"tags":')[1].split(']')[0]
+        category = tag_block.split(f'"{key}":')[1].split(',')[0]
+        if '"' in category:category = category.replace('"', '')
+        return category
+    except IndexError:
+        print('IndexError')
+
+def parser_script(script:str):
+    try:
+        script = script.get_text()
+
+        if 'website' in script and 'email':
+            if 'self.__next_f.push(' in script:
+                script = script.lstrip("self.__next_f.push(")
+                script = script.rstrip(")")
+            if '\\' in script:script = script.replace('\\', '')
+            print(script)
+            company_name = parser_text(key='name', script=script).title()
+            email = parser_text(key="email", script=script)
+            phone = parser_text(key="telephone", script=script)
+            if phone == None:
+                phone = parser_text(key="phone", script=script)
+            site = parser_text(key="website", script=script)
+            if site != None and '?' in site:site = site.split('?')[0]
+            city = parser_text(key="city", script=script)
+            street = parser_text(key="streetAddress", script=script)
+            country = parser_text(key="country_code", script=script)
+            zip_code = parser_text(key="zip_code", script=script)
+            category = parser_category(key="name", script=script)
+            twitter = parser_text(key="twitter", script=script)
+            if twitter != None and '://' not in twitter:
+                twitter = twitter = f"https://x.com/{twitter}"
+            facebook = parser_text(key="facebook", script=script)
+            insta = parser_text(key="instagram", script=script)
+            linkedin = parser_text(key="linkedin", script=script)
+            description = parser_description(key="description", script=script)
+            print(
+                    f"Company:\t{company_name}\n"
+                    f"Email:\t\t{email}\n"
+                    f"Phone:\t\t{phone}\n"
+                    f"Site:\t\t{site}\n"
+                    f"Category:\t{category}\n"
+                    f"Country:\t{country}\n"
+                    f"City:\t\t{city}\n"
+                    f"Street:\t\t{street}\n"
+                    f"Zip Code:\t{zip_code}\n"
+                    f"Twitter:\t{twitter}\n"
+                    f"Facebook:\t{facebook}\n"
+                    f"Instagram:\t{insta}\n"
+                    f"Linkedin:\t{linkedin}\n"
+                    f"Description:\t{description}"
+                    )
+    except IndexError:
+        print(f'не наш клиент')
+
+
+
 def get_info(response:str):
     bs = BeautifulSoup(response, 'lxml')
     scripts = bs.find_all('script')
+    redirect_warning = 'NEXT_REDIRECT'
+    
     for script in scripts:
         script = script.get_text()
-        
-        if '@context' in script and '\\\\' not in script:
-            data = json.loads(script.strip())
-            
-            for a, b in data.items():
-                print(f'{a}: {b}')
+        if redirect_warning in script:
+            redirect_url = script.split(";replace;")[1]
+            if ';' in redirect_url:redirect_url = redirect_url.split(';')[0]
+            redirect_url = f'https://www.brownbook.net{redirect_url}'
+            print(f'REDIRECT TO: {redirect_url}')
+            get_page_info(url=redirect_url)
+            return
 
-            company_name = data.get('name')
-            email = data.get('email')
-            phone = data.get('telephone')
-            description = data.get('description')
-            image_url = data.get('image')
-            url = data.get('url')
-            logo = data.get('logo')
-            founder_name = data.get('founder').get('name')
-            address_street = data.get('address').get('streetAddress')
-            post_code = data.get('address').get('postalCode')
-            country = data.get('address').get('addressCountry')
-            company_name = company_name.title() if company_name else company_name
-            print(
-                    f'Company:\t{company_name}\n'
-                    f'Founder:\t{founder_name}\n'
-                    f'Country:\t{country}\n'
-                    f'Post Code:\t{post_code}\n'
-                    f'Street:\t\t{address_street}\n'
-                    f'Email:\t\t{email}\n'
-                    f'Phone:\t\t{phone}\n'
-                    f'URL:\t\t{url}\n'
-                    f'Description:\t{description}'
-                    )
-
+    for script in scripts:
+        parser_script(script=script)
 
 def get_page_info(url:str):
     try:
