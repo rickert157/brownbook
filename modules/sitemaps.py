@@ -12,7 +12,11 @@ from modules.config import (
         sitemap_complite,
         sitemap_db
         )
-from modules.sql.recording_url import recording_urls_to_db, get_url_from_db
+from modules.sql.recording_url import (
+        recording_urls_to_db, 
+        get_url_from_db,
+        recording_company
+        )
 from SinCity.Agent.header import header
 from SinCity.colors import GREEN, BLUE, RESET
 import requests
@@ -54,16 +58,11 @@ def recording_second_level_map(list_url) -> None:
             file.write(f'{url}\n')
 
 
-def recording_company(list_url:str, list_complite:set) -> None:
-    pattern_url = 'https://www.brownbook.net/business/'
-    for url in list_url:
-        if pattern_url in url and url not in list_complite:
-            pass
 
 def complite_urls():
     list_complite = set()
     if os.path.exists(sitemap_complite):
-        with open(sitemap_last_step_txt, 'r') as file:
+        with open(sitemap_complite, 'r') as file:
             for line in file.readlines():
                 list_complite.add(line.strip())
 
@@ -133,15 +132,20 @@ def get_urls(mode:str):
         
         if db_status or txt_status:
             if db_status:
-                """ тут что-то уже сам не понял, что написал
                 list_urls = get_url_from_db()
 
                 list_complite = complite_urls()
-                
+                count_url = 0
                 for url in list_urls:
-                    list_company = parser_xml(url=url)
-                    recording_company(list_url=list_company, list_complite=list_complite)
-                """
+                    count_url+=1
+                    if url not in list_complite:
+                        list_company = parser_xml(url=url)
+                        recording_company(
+                                list_url=list_company
+                                )
+                        with open(sitemap_complite, 'a') as file:
+                            file.write(f'{url}\n')
+                        print(f'[{count_url} / {len(list_urls)}] {url} recording!')
         else:
             log_print(
                     f'{log_time()} {status_type_error} '

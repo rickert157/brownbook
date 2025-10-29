@@ -35,6 +35,28 @@ def recording_urls_to_db():
         conn.executemany(recording_command, list_urls)
         conn.commit()
 
+def recording_company(list_url:set):
+    conn = sqlite3.connect(sitemap_db)
+    create_table = f"""
+    CREATE TABLE IF NOT EXISTS companies(
+        id INTEGER PRIMARY KEY,
+        company TEXT UNIQUE
+    )
+    """
+    conn.execute(create_table)
+    conn.commit()
+    
+    update_list = []
+    for url in list_url:
+        if 'https://www.brownbook.net/business/' in url:
+            update_list.append([url])
+
+    if len(list_url) != 0:
+        recording_command = f"INSERT OR IGNORE INTO companies (company) VALUES (?)"
+        conn.executemany(recording_command, update_list)
+        conn.commit()
+
+
 def get_url_from_db():
     set_urls = set()
     conn = sqlite3.connect(sitemap_db)
