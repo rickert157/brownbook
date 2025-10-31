@@ -33,11 +33,6 @@ def init_parser():
         os.makedirs(result_dir)
         log_print(f'{log_time()} {status_type_info} CREATE dir:\t{result_dir}')
 
-    if not os.path.exists(result_file_path):
-        with open(result_file_path, 'w') as file:
-            writer = csv.writer(file)
-            writer.writerow(['Company', 'Domain', 'Email', 'Phone', 'Location'])
-        log_print(f'{log_time()} {status_type_info} CREATE file:\t{result_file_path}')
 
     if not os.path.exists(data_dir):
         os.makedirs(data_dir)
@@ -71,3 +66,39 @@ def parse_params(params:list[str]) -> dict[str | None]:
                             f'{log_time()} {status_type_error} '
                             f'необходимо передать значение: {YELLOW}{param}{RESET}=<value>')
     return parsed_argv
+
+
+def recording_company_info(
+        company_name:str=None,
+        email:str=None,
+        phone:str=None,
+        site:str=None,
+        category:str=None,
+        country:str=None,
+        city:str=None,
+        street:str=None,
+        zip_code:str=None,
+        twitter:str=None,
+        facebook:str=None,
+        insta:str=None,
+        description:str=None
+        ):
+    if not os.path.exists(result_file_path):
+        with open(result_file_path, 'w') as file:
+            writer = csv.writer(file)
+            list_columns = [
+                    'Company','Email','Phone','Site','Category',
+                    'Country','City','Street','Zip Code',
+                    'Twitter','Facebook','Insta','Description'
+                    ]
+            writer.writerow(list_columns)
+        #log_print(f'{log_time()} {status_type_info} CREATE file:\t{result_file_path}')
+
+    with open(result_file_path, 'a') as file:
+        writer = csv.writer(file)
+        list_columns = [
+            company_name,email,phone,site,category,
+            country,city,street,zip_code,
+            twitter,facebook,insta,description
+                ]
+        writer.writerow(list_columns)

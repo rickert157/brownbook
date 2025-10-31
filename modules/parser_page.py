@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 from modules.parser import get_source_page
-from modules.miniTools import termninal_line
+from modules.miniTools import termninal_line, recording_company_info
 from SinCity.Agent.header import header
 from SinCity.colors import RED, RESET, GREEN, BLUE, YELLOW
 import json
@@ -82,6 +82,21 @@ def parser_script(script:str):
                     f"{GREEN}|{RESET} Instagram:\t{insta}\n"
                     f"{GREEN}|{RESET} Linkedin:\t{linkedin}\n"
                     f"{GREEN}|{RESET} Description:\t{description}"
+                    )
+            recording_company_info(
+                    company_name=company_name,
+                    email=email,
+                    phone=phone,
+                    site=site,
+                    category=category,
+                    country=country,
+                    city=city,
+                    street=street,
+                    zip_code=zip_code,
+                    twitter=twitter,
+                    facebook=facebook,
+                    insta=insta,
+                    description=description
                     )
     except IndexError:
         print(f'не наш клиент')
