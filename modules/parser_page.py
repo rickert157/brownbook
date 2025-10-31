@@ -106,7 +106,7 @@ def get_info(response:str):
     bs = BeautifulSoup(response, 'lxml')
     scripts = bs.find_all('script')
     redirect_warning = 'NEXT_REDIRECT'
-    
+   
     for script in scripts:
         script = script.get_text()
         if redirect_warning in script:

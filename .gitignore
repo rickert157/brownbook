@@ -3,8 +3,10 @@ tests/
 trash/
 Data/
 Result/
+db/
 **/*.py[oc]
 **/__pycache__/*
 *.log
 **/*.csv
 **/*.db
+**/*.csv
