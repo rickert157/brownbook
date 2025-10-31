@@ -125,7 +125,7 @@ def get_page_info(url:str):
     try:
         head = header()
 
-        response = requests.get(url, headers=head, proxies=proxies)
+        response = requests.get(url, headers=head)
         status = response.status_code
 
         if status == 200:
