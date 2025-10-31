@@ -1,8 +1,9 @@
 from SinCity.colors import RED, RESET, GREEN, BLUE, YELLOW
+import socket
 
 #директории/файл для хранения инфы
 result_dir = 'Result'
-result_file = 'brownbook.csv'
+result_file = f'brownbook_{socket.gethostname()}.csv'
 result_file_path = f'{result_dir}/{result_file}'
 data_dir = 'Data'
 countries_file = f'{data_dir}/countries.csv'

@@ -20,20 +20,24 @@ def read_base(base:str):
         count_machine_dir = 1
         count_file = 0
         
-        for row in csv.DictReader(file):
+        for i, row in enumerate(csv.DictReader(file)):
             url = row.get('company')
             id_url = row.get('id')
-            count_file+=1
-            if count_file == 11:
-                count_machine_dir += 1
-                count_file = 1
             
-            file_name = f'container_{count_file}'
+            count_machine_dir = ((i - 1) // 10) % 20 + 1
+            count_file = ((i - 1) % 10) + 1
+
+            
+            file_name = f'container_{count_file}.csv'
             machine_dir = f'db/machine_{count_machine_dir}'
+
             if not os.path.exists(machine_dir):os.makedirs(machine_dir)
+            
             base_name = f'{machine_dir}/{file_name}'
             recording_info(id_url=id_url, url=url, base_name=base_name)
-            if count_machine_dir == 20:count_machine_dir = 1
+            
+            if count_machine_dir == 20:
+                count_machine_dir = 1
             
 
             
