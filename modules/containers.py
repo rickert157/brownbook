@@ -1,3 +1,4 @@
+from SinCity.colors import RED, RESET, GREEN, BLUE, YELLOW
 import subprocess
 import sys
 #В терминале для теста попробовал монтировать базу - все ок
@@ -6,11 +7,14 @@ import sys
 #             -v $PWD/Result:/root/brownbook/Result \
 #             brownbook:latest
 def run_command(command:str):
-    print(command)
+    divide_line = '-'*50
+    print(
+            f'{divide_line}\n'
+            f'{GREEN}{command}{RESET}'
+            )
     subprocess.run(command, shell=True)
 
 def container_run():
-    print('run')
     i=0
     for _ in range(10):
         i+=1
@@ -24,7 +28,11 @@ def container_run():
         run_command(command)
 
 def container_start():
-    print('start')
+    i=0
+    for _ in range(10):
+        i+=1
+        command = f"podman start brownbook_{i}"
+        run_command(command)
 
 if __name__ == '__main__':
     params = sys.argv

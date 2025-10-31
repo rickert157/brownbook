@@ -81,7 +81,8 @@ def parser_script(script:str):
                     f"{GREEN}|{RESET} Facebook:\t{facebook}\n"
                     f"{GREEN}|{RESET} Instagram:\t{insta}\n"
                     f"{GREEN}|{RESET} Linkedin:\t{linkedin}\n"
-                    f"{GREEN}|{RESET} Description:\t{description}"
+                    f"{GREEN}|{RESET} Description:\t{description}\n"
+                    f"{GREEN}{termninal_line()}{RESET}\n"
                     )
             recording_company_info(
                     company_name=company_name,
@@ -123,11 +124,14 @@ def get_info(response:str):
 def get_page_info(url:str):
     try:
         head = header()
-        response = requests.get(url, headers=head)
+
+        response = requests.get(url, headers=head, proxies=proxies)
         status = response.status_code
 
         if status == 200:
             get_info(response=response.text)
+        else:
+            print(f'{RED}STATUS CODE: {status}{RESET}')
     
     except requests.exceptions.ConnectionError:
         print('ConnectionError')
