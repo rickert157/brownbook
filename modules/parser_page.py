@@ -101,8 +101,10 @@ def parser_script(script:str):
                     insta=insta,
                     description=description
                     )
+            return True
     except IndexError:
         print(f'не наш клиент')
+        return False
 
 
 def get_info(response:str):
@@ -121,7 +123,9 @@ def get_info(response:str):
             return
 
     for script in scripts:
-        parser_script(script=script)
+        resule_parser = parser_script(script=script)
+        if resule_parser:
+            break
 
 def get_page_info(url:str):
     try:

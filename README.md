@@ -1,12 +1,23 @@
-# parser template 
+# parser brownbook
+Данный инструмент решает задачу автоматизированного сбора компаний с сервиса brownbook
+
+## Требования
+- GNU/Linux - хост, тестировалось только на Arch-based дистрибутиве
+- python3
+- Tor
+- Podman
 
 ## Установка
 ```sh
 git clone https://github.com/rickert157/brownbook.git
 ```
 ```sh
-cd brownbook && python3 -m venv venv && ./venv/bin/pip install -r requirements.txt && ./venv/bin/pip freeze
+cd brownbook && python3 -m venv venv 
 ```
+```sh
+ ./venv/bin/pip install -r requirements.txt && ./venv/bin/pip freeze
+```
+
 ### Режим отладки
 Относится больше к фреймворку, вокруг которого написал инструмент  
 Для отладки можно парсить по одной странице, указывая параметр --test-url с url
@@ -15,13 +26,17 @@ python3 __main__.py --test-url=https://github.com
 ```
 
 ## Сбор sitemap
-Первичные ссылки - 30шт всего
+Первичные ссылки - 30шт всего. На первой странице сайтмапа всего 30 ссылок, их собрать можно следующей командой
 ```sh
 python3 __main__.py --sitemap=sitemap-level-1
 ```
-Ссылки второго уровня, парсер будет ходить по ссылкам с первого уровня и писать их в отдельный файл
+Ссылки второго уровня, парсер будет ходить по ссылкам с первого уровня и писать полученные в отдельный файл, запустить сбор можно следующей командой. После сбора ссылок будет предложено сохранить их в БД, для сбора компаний необходимо ответить утвердительно
 ```sh
 python3 __main__.py --sitemap=sitemap-level-2
+```
+Собрать ссылки на все компании можно следующей командой. Процесс длительной, может занять более суток
+```sh
+python3 __main__.py --sitemap=get-company
 ```
 
 ## Тест парсинга страницы компании
@@ -36,3 +51,15 @@ python3 -m modules.parser_page https://www.brownbook.net/business/21220618/denni
 ```sh
 python3 -m modules.divide_list_companies
 ```
+
+## Запуск в контейнерах
+Для запуска контейнеров используется модуль modules.containers. Для использования модуля необходим **podman**. Модуль решает задачу автоматизированного запуска контейнеров, рассчитан на запуск 10ти контейнеров с одной машины. Достыпны два параметра запуска:  
+- run - для первичного старта контейнера
+- start - для запуска уже существующего контейнера
+```sh
+python3 -m modules.containers run
+```
+```sh
+python3 -m modules.containers start
+```
+
