@@ -1,5 +1,6 @@
 from SinCity.colors import RED, RESET, GREEN, BLUE, YELLOW
 from modules.config import data_dir
+from modules.miniTools import init_parser
 from modules.parser_page import get_page_info
 from typing import Optional
 import csv
@@ -19,6 +20,7 @@ def complite_url_list() -> Optional[set({})] | None:
     return list_url
 
 def crowler():
+    init_parser()
     with open(path_base, 'r') as file:
         complite_url = complite_url_list()
         count_url = 0

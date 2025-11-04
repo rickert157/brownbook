@@ -62,4 +62,13 @@ python3 -m modules.containers run
 ```sh
 python3 -m modules.containers start
 ```
+**Тестирование прокси в контейнере**  
+Это командой можно запустить контейнер
+```sh
+podman run --rm --network host -it --name brownbook brownbook:latest
+```
+Команда для быстрого теста прокси внутри контейнера
+```sh
+./venv/bin/python -m modules.proxy_test tor
+```
 

@@ -1,11 +1,6 @@
 from SinCity.colors import RED, RESET, GREEN, BLUE, YELLOW
 import subprocess
 import sys
-#В терминале для теста попробовал монтировать базу - все ок
-#podman run --rm -it \
-#             -v $PWD/db/machine_1/container_1.csv:/root/brownbook/db/machine/companies.csv \
-#             -v $PWD/Result:/root/brownbook/Result \
-#             brownbook:latest
 def run_command(command:str):
     divide_line = '-'*50
     print(
@@ -20,8 +15,9 @@ def container_run():
         i+=1
         command = (
                 f"podman run -it "
+                f"--network host "
                 f"-v $PWD/db/machine_1/container_{i}.csv:"
-                f"/root/brownbook/machine/container.csv "
+                f"/root/brownbook/db/machine/container.csv "
                 f"-v $PWD/Result:/root/brownbook/Result "
                 f"--name brownbook_{i} brownbook:latest"
                 )
