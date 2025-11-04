@@ -31,7 +31,7 @@ def crowler():
                 
                 #Парсим страницу
                 get_page_info(url=url)
-                time.sleep(1)
+                time.sleep(3)
 
                 with open(complite_file, 'a') as file:
                     file.write(f'{url}\n')

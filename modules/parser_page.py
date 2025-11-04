@@ -5,6 +5,7 @@ from SinCity.Agent.header import header
 from SinCity.colors import RED, RESET, GREEN, BLUE, YELLOW
 import json
 import requests
+import socks
 import sys
 import time
 
@@ -20,6 +21,7 @@ def parser_text(key:str, script:str) -> str:
     try:
         value = script.split(f'"{key}":')[1].split(',')[0]
         if '"' in value:value = value.replace('"', '')
+        if 'U0026' in value:value = value.replace('U0026', '&')
         if value == "null":value = None
         return value
     except IndexError:
@@ -125,7 +127,13 @@ def get_page_info(url:str):
     try:
         head = header()
 
-        response = requests.get(url, headers=head)
+        TOR_SOCKS_PROXY = 'socks5://127.0.0.1:9050'
+        proxies = {
+                'http':TOR_SOCKS_PROXY,
+                'https':TOR_SOCKS_PROXY
+                }
+
+        response = requests.get(url, proxies=proxies, headers=head)
         status = response.status_code
 
         if status == 200:
