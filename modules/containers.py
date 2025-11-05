@@ -1,10 +1,10 @@
 from SinCity.colors import RED, RESET, GREEN, BLUE, YELLOW
 import subprocess
 import sys
-def run_command(command:str):
+def run_command(command:str, count:int):
     divide_line = '-'*50
     print(
-            f'{divide_line}\n'
+            f'[{count}]{divide_line}\n'
             f'{GREEN}{command}{RESET}'
             )
     subprocess.run(command, shell=True)
@@ -14,21 +14,22 @@ def container_run():
     for _ in range(10):
         i+=1
         command = (
-                f"podman run -it "
+                f"podman run -d "
+                f"--hostname container_{i} "
                 f"--network host "
                 f"-v $PWD/db/machine_1/container_{i}.csv:"
                 f"/root/brownbook/db/machine/container.csv "
                 f"-v $PWD/Result:/root/brownbook/Result "
                 f"--name brownbook_{i} brownbook:latest"
                 )
-        run_command(command)
+        run_command(command, count=i)
 
 def container_start():
     i=0
     for _ in range(10):
         i+=1
         command = f"podman start brownbook_{i}"
-        run_command(command)
+        run_command(command, count=i)
 
 if __name__ == '__main__':
     params = sys.argv
