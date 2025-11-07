@@ -1,6 +1,8 @@
 from SinCity.colors import RED, RESET, GREEN, BLUE, YELLOW
 import subprocess
 import sys
+import time 
+
 def run_command(command:str, count:int):
     divide_line = '-'*50
     print(
@@ -23,6 +25,7 @@ def container_run():
                 f"--name brownbook_{i} brownbook:latest"
                 )
         run_command(command, count=i)
+        time.sleep(2)
 
 def container_start():
     i=0
@@ -30,6 +33,7 @@ def container_start():
         i+=1
         command = f"podman start brownbook_{i}"
         run_command(command, count=i)
+        time.sleep(2)
 
 if __name__ == '__main__':
     params = sys.argv

@@ -2,13 +2,15 @@ import csv
 import os
 import sys
 
-def recording_info(id_url:str, url:str, base_name):
-    if not os.path.exists(base_name):
-        with open(base_name, 'w') as file:
+def recording_info(id_url:str, url:str, file_name:str):
+    if not os.path.exists('db/machine_1'):os.makedirs('db/machine_1')
+    file_name = f'db/machine_1/{file_name}'
+    if not os.path.exists(file_name):
+        with open(file_name, 'w') as file:
             writer = csv.writer(file)
             writer.writerow(['id', 'url'])
 
-    with open(base_name, 'a') as file:
+    with open(file_name, 'a') as file:
         writer = csv.writer(file)
         writer.writerow([id_url, url])
         print(f'[{id_url}] {url}')
@@ -17,27 +19,16 @@ def recording_info(id_url:str, url:str, base_name):
 def read_base(base:str):
     with open(base, 'r') as file:
 
-        count_machine_dir = 1
         count_file = 0
-        
-        for i, row in enumerate(csv.DictReader(file)):
+        for row in csv.DictReader(file):
+            count_file+=1
             url = row.get('company')
             id_url = row.get('id')
-            
-            count_machine_dir = ((i - 1) // 10) % 20 + 1
-            count_file = ((i - 1) % 10) + 1
 
-            
-            file_name = f'container_{count_file}.csv'
-            machine_dir = f'db/machine_{count_machine_dir}'
+            recording_info(url=url, id_url=id_url, file_name=f'conteiner_{count_file}.csv')
 
-            if not os.path.exists(machine_dir):os.makedirs(machine_dir)
+            if count_file == 10:count_file = 0
             
-            base_name = f'{machine_dir}/{file_name}'
-            recording_info(id_url=id_url, url=url, base_name=base_name)
-            
-            if count_machine_dir == 20:
-                count_machine_dir = 1
             
 
             
