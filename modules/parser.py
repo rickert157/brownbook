@@ -1,6 +1,5 @@
 from bs4 import BeautifulSoup 
 from SinCity.Agent.header import header
-from SinCity.Browser.driver_chrome import driver_chrome
 from SinCity.colors import RED, RESET, GREEN, BLUE, YELLOW
 from modules.logger import log_print
 from modules.miniTools import log_time

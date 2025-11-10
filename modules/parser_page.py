@@ -130,14 +130,7 @@ def get_info(response:str):
 def get_page_info(url:str):
     try:
         head = header()
-
-        TOR_SOCKS_PROXY = 'socks5://127.0.0.1:9050'
-        proxies = {
-                'http':TOR_SOCKS_PROXY,
-                'https':TOR_SOCKS_PROXY
-                }
-
-        response = requests.get(url, proxies=proxies, headers=head)
+        response = requests.get(url, headers=head)
         status = response.status_code
 
         if status == 200:
