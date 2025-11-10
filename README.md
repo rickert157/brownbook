@@ -72,3 +72,9 @@ podman run --rm --network host -it --name brownbook brownbook:latest
 ./venv/bin/python -m modules.proxy_test tor
 ```
 
+## Путь меньшего сопротивления
+Так как объем для обхода слишком большой - можно пойти по пути меньшего сопротивления для самого сервиса - сбор топовых категорий, выборка подходящих и обход по этим категориям.  
+Для этого нужно собрать категории
+```sh
+python3 -m modules.get_categories
+```

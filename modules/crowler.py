@@ -8,7 +8,7 @@ import os
 import sys
 import time
 
-path_base = 'db/machine/container.csv'
+path_base = f'{data_dir}/base_url.csv'
 complite_file = f'{data_dir}/complite_url.txt'
 
 def complite_url_list() -> Optional[set({})] | None:
