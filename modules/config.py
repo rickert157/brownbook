@@ -7,6 +7,7 @@ result_file = f'brownbook_{socket.gethostname()}.csv'
 result_file_path = f'{result_dir}/{result_file}'
 data_dir = 'Data'
 countries_file = f'{data_dir}/countries.csv'
+categories_doc = f'{data_dir}/categories.csv'
 
 sitemap_first_step_file = f'{data_dir}/sitemap_start.txt'
 sitemap_second_level = f'{data_dir}/sitemap_second.txt'

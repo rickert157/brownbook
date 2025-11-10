@@ -78,3 +78,7 @@ podman run --rm --network host -it --name brownbook brownbook:latest
 ```sh
 python3 -m modules.get_categories
 ```
+Дажее можно использовать modules.get_companies_url для сбора ссылок на компании на компании
+```sh
+python3 -m modules.get_companies_url category='business setup dubai'
+```

@@ -1,10 +1,9 @@
 import csv
 import os
 import requests
-from modules.config import data_dir
+from modules.config import data_dir, categories_doc
 
 def recording_categories(count:int, category:str, url:str):
-    categories_doc = f'{data_dir}/categories.csv'
     if not os.path.exists(categories_doc):
         with open(categories_doc, 'w') as file:
             writer = csv.writer(file)
