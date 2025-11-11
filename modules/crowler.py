@@ -19,8 +19,16 @@ def complite_url_list() -> Optional[set({})] | None:
                 list_url.add(line.strip())
     return list_url
 
+def count_urls() -> int:
+    count = 0
+    with open(path_base, 'r') as file:
+        for row in csv.DictReader(file):
+            count+=1
+    return count
+
 def crowler():
     init_parser()
+    len_list_url = count_urls()
     with open(path_base, 'r') as file:
         complite_url = complite_url_list()
         count_url = 0
@@ -30,7 +38,7 @@ def crowler():
             url = row.get('url')
             category = row.get('category')
             if url not in complite_url:
-                print(f'[{count_url}] {url}')
+                print(f'[ {count_url} / {len_list_url} ] {url}')
                 
                 #Парсим страницу
                 get_page_info(url=url, category=category)
