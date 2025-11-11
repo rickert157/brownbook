@@ -28,11 +28,12 @@ def crowler():
             count_url+=1
             id_url = row.get('id')
             url = row.get('url')
+            category = row.get('category')
             if url not in complite_url:
                 print(f'[{count_url}] {url}')
                 
                 #Парсим страницу
-                get_page_info(url=url)
+                get_page_info(url=url, category=category)
                 time.sleep(10)
 
                 with open(complite_file, 'a') as file:

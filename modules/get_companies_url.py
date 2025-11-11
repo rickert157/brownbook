@@ -55,14 +55,14 @@ def get_url_category(category:str) -> Optional[str] | False:
 #######################################
 #       Основная функция модуля
 #######################################
-def recording_business(id_:int, url:str):
+def recording_business(id_:int, url:str, category:str):
     if not os.path.exists(path_base):
         with open(path_base, 'w') as file:
             writer = csv.writer(file)
-            writer.writerow(['id', 'url'])
+            writer.writerow(['id', 'url', 'category'])
     with open(path_base, 'a') as file:
         writer = csv.writer(file)
-        writer.writerow([id_, url])
+        writer.writerow([id_, url, category])
 
 def parser_category(data:dict[str]):
     category = data['category']
@@ -109,7 +109,7 @@ def parser_category(data:dict[str]):
                             f'Site: {site}\n'
                             f'URL: {url_company}\n'
                             )
-                    recording_business(id_=id_, url=url_company)
+                    recording_business(id_=id_, url=url_company, category=category)
 
             else:
                 print(f'{YELLOW}status code: {response.status_code}{RESET}')

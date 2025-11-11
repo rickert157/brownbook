@@ -27,16 +27,8 @@ def parser_text(key:str, script:str) -> str:
     except IndexError:
         pass
 
-def parser_category(key:str, script:str) -> str:
-    try:
-        tag_block = script.split('"tags":')[1].split(']')[0]
-        category = tag_block.split(f'"{key}":')[1].split(',')[0]
-        if '"' in category:category = category.replace('"', '')
-        return category
-    except IndexError:
-        pass
 
-def parser_script(script:str):
+def parser_script(script:str, category:str):
     try:
         script = script.get_text()
 
@@ -60,7 +52,6 @@ def parser_script(script:str):
             street = parser_text(key="streetAddress", script=script)
             country = parser_text(key="country_code", script=script)
             zip_code = parser_text(key="zip_code", script=script)
-            category = parser_category(key="name", script=script)
             twitter = parser_text(key="twitter", script=script)
             if twitter != None and '://' not in twitter:
                 twitter = twitter = f"https://x.com/{twitter}"
@@ -107,7 +98,7 @@ def parser_script(script:str):
         return False
 
 
-def get_info(response:str):
+def get_info(response:str, category:str):
     bs = BeautifulSoup(response, 'lxml')
     scripts = bs.find_all('script')
     redirect_warning = 'NEXT_REDIRECT'
@@ -123,18 +114,18 @@ def get_info(response:str):
             return
 
     for script in scripts:
-        resule_parser = parser_script(script=script)
+        resule_parser = parser_script(script=script, category=category)
         if resule_parser:
             break
 
-def get_page_info(url:str):
+def get_page_info(url:str, category:str):
     try:
         head = header()
         response = requests.get(url, headers=head)
         status = response.status_code
 
         if status == 200:
-            get_info(response=response.text)
+            get_info(response=response.text, category=category)
         else:
             print(f'{RED}STATUS CODE: {status}{RESET}')
     
