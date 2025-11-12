@@ -110,7 +110,7 @@ def get_info(response:str, category:str):
             if ';' in redirect_url:redirect_url = redirect_url.split(';')[0]
             redirect_url = f'https://www.brownbook.net{redirect_url}'
             print(f'{RED}REDIRECT TO: {redirect_url}{RESET}')
-            get_page_info(url=redirect_url)
+            get_page_info(url=redirect_url, category=category)
             return
 
     for script in scripts:

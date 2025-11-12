@@ -1,0 +1,11 @@
+[Unit]
+Description=Parser Brownbook for %i
+
+[Service]
+User=%i
+ExecStart=/home/%i/Parser/Brownbook/venv/bin/python3 /home/%i/Parser/Brownbook/modules/crowler.py
+WorkingDirectory=/home/%i/Parser/Brownbook
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
