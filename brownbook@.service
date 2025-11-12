@@ -3,7 +3,7 @@ Description=Parser Brownbook for %i
 
 [Service]
 User=%i
-ExecStart=/home/%i/Parser/Brownbook/venv/bin/python3 /home/%i/Parser/Brownbook/modules/crowler.py
+ExecStart=/home/%i/Parser/Brownbook/venv/bin/python3 /home/%i/Parser/Brownbook/__main__.py --crowler
 WorkingDirectory=/home/%i/Parser/Brownbook
 Restart=on-failure
 

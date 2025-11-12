@@ -51,20 +51,23 @@ def recording_countries(country:str, count:str):
 
 def parse_params(params:list[str]) -> dict[str | None]:
     """Парсер параметров коммандной строки"""
-    commands = ['--test-url', '--parser', '--countries', '--sitemap']
+    commands = ['--test-url', '--parser', '--countries', '--sitemap', '--crowler']
     parsed_argv = {}
     
     for command in commands:
         for param in params:
             if command in param:
-                try:
-                    value = param.split('=', 1)[1].strip()
-                    if command not in parsed_argv:
-                        parsed_argv[command] = value
-                except IndexError:
-                    log_print(
-                            f'{log_time()} {status_type_error} '
-                            f'необходимо передать значение: {YELLOW}{param}{RESET}=<value>')
+                if '--crowler' in param:
+                    parsed_argv[command] = '--crowler'
+                    return parsed_argv
+                    try:
+                        value = param.split('=', 1)[1].strip()
+                        if command not in parsed_argv:
+                            parsed_argv[command] = value
+                    except IndexError:
+                        log_print(
+                                f'{log_time()} {status_type_error} '
+                                f'необходимо передать значение: {YELLOW}{param}{RESET}=<value>')
     return parsed_argv
 
 

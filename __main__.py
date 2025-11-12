@@ -14,6 +14,7 @@ from modules.config import (
 from modules.parser import get_source_page 
 from modules.get_countries import get_all_countries
 from modules.sitemaps import get_urls
+from modules.crowler import crowler
 import requests
 import sys
 import time
@@ -29,11 +30,12 @@ if __name__ == '__main__':
         argv = parse_params(params=params)
     
         if len(argv) != 0:
-            #print(argv)
+            print(argv)
             test_url = argv['--test-url'] if argv.get('--test-url') else None 
             parser = argv['--parser'] if argv.get('--parser') else None 
             countries = argv['--countries'] if argv.get('--countries') else None
             sitemap = argv['--sitemap'] if argv.get('--sitemap') else None
+            crowler_start = argv['--crowler'] if argv.get('--crowler') else None
 
             parser_mode_list = ['requests', 'selenium', None]
 
@@ -48,6 +50,9 @@ if __name__ == '__main__':
                 get_urls(mode=sitemap)
             elif test_url:
                 get_source_page(url=test_url, parser=parser)
+            elif crowler_start:
+                crowler()
+
             
         if len(argv) == 0:
             log_print(f'{log_time()} {status_type_warning} необходимо передать параметры')
