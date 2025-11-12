@@ -3,6 +3,7 @@ tests/
 trash/
 Data/
 !Data/torrc
+!Data/businesses_url.csv
 Result/
 db/
 **/*.py[oc]
