@@ -38,7 +38,11 @@ def parser_script(script:str, category:str):
                 script = script.rstrip(")")
             if '\\' in script:script = script.replace('\\', '')
             #print(script)
-            company_name = parser_text(key='name', script=script).title()
+            company_name = parser_text(key='name', script=script)
+            if company_name:
+                company_name = company_name.title()
+            else:
+                return False
             email = parser_text(key="email", script=script)
             phone = parser_text(key="telephone", script=script)
             if phone == None:
